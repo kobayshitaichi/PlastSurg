@@ -1,0 +1,27 @@
+root_dir : /media/aolab/untitiled/workspace/PlastSurg
+dataset_dir : /media/aolab/untitiled/workspace/PlastSurgDataset
+model_name : resnet50
+test_extract : True
+fps_sampling : 5
+fps_sampling_test : 30
+batch_size : 32 
+num_tasks : 2 # 0:Tool 1:Phase 2:Phase+Tool
+num_workers : 16
+num_sanity_val_steps : 4
+input_size : 224
+out_features : 6
+tool_features : 7
+features_subsampling : 30 
+features_per_seconds : 1
+learning_rate : 0.0005
+early_stopping_metric : val_loss
+pretrained : True
+save_top_k : 1
+max_epocks : 20
+min_epocks : 10
+gpus : [0]
+feature_output_path : /media/aolab/untitiled/workspace/PlastSurg/outputs
+log_every_n_steps : 1
+add_tool_feats : False
+
+name : tecno
